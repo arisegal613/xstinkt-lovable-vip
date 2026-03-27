@@ -43,11 +43,7 @@ export const Navigation = () => {
           <div className="flex items-center justify-between h-16 lg:h-20">
             {/* Logo */}
             <a
-              href="#"
-              onClick={(e) => {
-                e.preventDefault();
-                window.scrollTo({ top: 0, behavior: "smooth" });
-              }}
+              href="/"
               className="text-xl lg:text-2xl font-bold text-foreground tracking-tight"
             >
               Xstinkt
@@ -64,6 +60,12 @@ export const Navigation = () => {
                   {link.label}
                 </button>
               ))}
+              <a
+                href="/faq"
+                className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors duration-200"
+              >
+                FAQ
+              </a>
             </div>
 
             {/* Mobile Menu Button */}
@@ -108,6 +110,13 @@ export const Navigation = () => {
                     {link.label}
                   </button>
                 ))}
+                <a
+                  href="/faq"
+                  className="text-lg font-medium text-foreground py-2 text-left hover:text-primary transition-colors"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  FAQ
+                </a>
               </div>
             </motion.div>
           </motion.div>
